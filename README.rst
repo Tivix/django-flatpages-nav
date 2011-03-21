@@ -32,23 +32,23 @@ Installation
 
 - Run a db migration (using south) to make sure db table(s) for this app get created::
 	
-	``python manage.py migrate flatpages_nav``
+	python manage.py migrate flatpages_nav
 
 - In your base template (usually base.html) use the new context variables that this app has added::
 	
-	``<ul id="main_nav">
+	<ul id="main_nav">
         {% for flatpage in main_nav_flatpages %}
             <li><a href="{{ flatpage.url }}">{{ flatpage.title }}</a></li>
         {% endfor %}
-    </ul>``
+    </ul>
 	
 	and in the footer
 	
-	``<ul id="footer_nav">
+	<ul id="footer_nav">
         {% for flatpage in footer_nav_flatpages %}
             <li><a href="{{ flatpage.url }}">{{ flatpage.title }}</a></li>
         {% endfor %}
-    </ul>``
+    </ul>
 
 
 This open-source app is brought to you by Tivix, Inc. ( http://tivix.com/ )
